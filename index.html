@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Linus Chen的主页</title>
+    <!-- web fonts -->
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://kit.fontawesome.com/2a7f08e361.js" crossorigin="anonymous"></script>
+    <style>
+    .card {
+      margin-bottom: 20px; /* 增加卡片之间的距离 */
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* 添加阴影效果 */
+      transition: 0.3s; /* 添加过渡效果 */
+      border-radius: 0; /* 设置卡片为直角 */
+    }
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* 鼠标悬停时增加阴影效果 */
+    }
+    .col-md-5 {
+      padding: 0 20px; /* 增加两个栏目之间的距离 */
+    }
+    #blog-posts {
+      
+      border-image: linear-gradient(to bottom, #999 30%, #ddd 50%, #999 70%);
+      border-image-slice: 1;
+    }
+    #banner-text {
+      color: white;
+      font-size: 2.75rem;
+      font-weight: 500;
+    }
+    .three-grids-columns a {
+      display: block;
+      cursor: pointer;
+      text-decoration: none; /* 移除链接的下划线 */
+      color: inherit; /* 使链接的颜色与周围的文本颜色一致 */
+    }
+    .divider {
+    border-left: 1px solid #ddd;
+    height: 80%;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, #ddd, transparent);
+    }
+    </style>
+  </head>
+  <body>
+
+    <section class="w3l-bootstrap-header">
+      <nav class="navbar navbar-expand-lg navbar-light py-lg-3 py-2">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"> Linus Chen</a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon fa fa-bars"></span>
+          </button>
+    
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">主页</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://blog.linuschen.ink">博客</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/mmdexb">Github</a>
+              </li>
+             
+            
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">关于</a>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+    </section>
+
+     <section class="w3l-main-banner" id="home">
+      <div class="companies20-content">
+        <div class="companies-wrapper">
+            <div class="item">
+             
+                <div class="slider-info banner-view text-center">
+                  <div class="banner-info container">
+                    <img src="assets/images/c1.jpg" alt="about image" class="img-fluid">
+                    <h3 id="banner-text" class="mt-5"></h3>
+                    <p class="my-4 mb-5"><i>"Life's too short to not live Wild"</i></p><br>
+                   <script>
+                    var text = 'Hello, I am Linus Chen👋';
+                    var i = 0;
+                    var speed = 100; // 速度可以根据需要调整
+
+                    function typeWriter() {
+                      if (i < text.length) {
+                        document.getElementById('banner-text').textContent += text.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, speed);
+                      }
+                    }
+
+                    // 创建一个Intersection Observer
+                    var observer = new IntersectionObserver(function(entries) {
+                      // 如果`<h3>`标签进入视口，开始动画
+                      if(entries[0].isIntersecting === true)
+                        typeWriter();
+                    }, { threshold: [0] });
+
+                    observer.observe(document.getElementById('banner-text'));
+                   </script>
+                  </div>
+                </div>
+              
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="w3l-about ">
+    <div class="skills-bars py-5">
+     <div class="container py-md-3">
+      <div class="heading text-center mx-auto">
+        <h3 class="head">欢迎来到我的主页</h3>
+        <p class="my-3 head">你好，我是Linus Chen，来自山东省东营市，目前就读于青岛理工大学，攻读网络空间安全专业。我的爱好是模拟飞行，摄影与电影。我曾参加过所就读高中的直播平台优化，XNATC模拟飞行平台的编写与管理，Aerosoft A3XX's EFB等一系列项目</p>
+          
+        </div>
+    <div class="row mt-5 pt-3">
+        <div class="col-lg-4 col-md-4 col-sm-6 skills-bar-grids mb-4 pb-2">
+            <h4>运维</h4>
+            <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-color" role="progressbar" style="width: 50% ;height:4px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+          </div>
+        </div>
+    </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 skills-bar-grids mb-4 pb-2">
+            <h4>摄影</h4>
+            <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-color" role="progressbar" style="width: 80% ;height:4px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+          </div>
+        </div>
+    </div>
+    <div class="col-lg-4  col-md-4 col-sm-6 skills-bar-grids mb-4 pb-2">
+        <h4>电影</h4>
+        <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-color" role="progressbar" style="width: 60% ;height:4px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      </div>
+    </div>
+    </div>
+    <div class="col-lg-4  col-md-4 col-sm-6 skills-bar-grids mb-4 pb-2">
+        <h4>开发</h4>
+        <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-color" role="progressbar" style="width: 70% ;height:4px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      </div>
+    </div>
+    </div>
+    <div class="col-lg-4  col-md-4 col-sm-6 skills-bar-grids mb-4 pb-2">
+        <h4>模拟飞行</h4>
+        <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-color" role="progressbar" style="width: 90% ;height:4px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      </div>
+    </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-6 skills-bar-grids ">
+        <h4>游戏</h4>
+        <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-color" role="progressbar" style="width: 80% ;height:4px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      </div>
+    </div>
+    </div>
+    
+     </div>
+     </div>
+    </div>
+     </section>
+    <section class="w3l-feature-3" id="features">
+      <div class="grid top-bottom">
+        <div class="container">
+          <div class="heading text-center mx-auto">
+                    <h3 class="head text-white">进一步了解我？</h3>
+                    
+                  </div>
+          <div class="middle-section grid-column text-center mt-5 pt-3">
+            <div class="three-grids-columns">
+              <a href="https://blog.linuschen.ink" style="display: block; cursor: pointer;">
+                <span class="fa fa-blog"></span>
+                <h4>博客</h4>
+                <p>记录一些日常片段，学习心得，经验笔记，发表一些自己的观点</p>
+              </a>
+            </div>
+            <div class="three-grids-columns">
+              <a href="https://github.com/mmdexb" style="display: block; cursor: pointer;">
+                <span class="fa fa-github"></span>
+                <h4>Github</h4>
+                <p>我制作的一些开源项目与我喜爱的开源项目</p>
+              </a>
+            </div>
+            <div class="three-grids-columns">
+              <a href="https://gallery.linuschen.ink" style="display: block; cursor: pointer;">
+                <span class="fa fa-camera"></span>
+                <h4>画廊</h4>
+                <p>上传一些我拍摄的照片与模拟飞行截图</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="products-4" id="portfolio">
+      <!-- Products4 block -->
+      <div id="products4-block" class="text-center">
+          <div class="container">
+    <div class="heading text-center mx-auto mb-5">
+        <h3 class="head">我的动态</h3>
+        <p class="my-3 head">他们来自于我的博客与Github</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5" id="blog-posts">
+                    <!-- 博客动态将在这里显示 -->
+                </div>
+                <div class="col-md-2 d-flex align-items-center justify-content-center">
+                    <div class="divider"></div>
+                </div>
+                <div class="col-md-5" id="github-activity">
+                    <!-- GitHub动态将在这里显示 -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  </div>
+
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script>
+    // 使用jQuery获取RSS源
+    $.get('https://www.linuschen.ink/porxy.php', function (data) {
+      var $xml = $(data);
+      $xml.find("item").slice(0, 3).each(function () {
+        var $this = $(this),
+            item = {
+              title: $this.find("title").text(),
+              link: $this.find("link").text(),
+              description: $this.find("description").text(),
+              pubDate: $this.find("pubDate").text(),
+              guid:$this.find("guid").text()
+            };
+        console.log($this.find("title").text())    
+        // 使用Bootstrap的card组件显示博客动态
+        $('#blog-posts').append(`
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">${item.title}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">${moment(item.pubDate).format('YYYY-MM-DD HH:mm')}</h6>
+              <p class="card-text">${item.description}</p>
+              <a href="${item.guid}" class="card-link">Read more</a>
+            </div>
+          </div>
+        `);
+      });
+    });
+
+    // 使用jQuery获取GitHub API
+    $.get('https://www.linuschen.ink/events.json', function (data) {
+      data.slice(0, 3).forEach(function (event) {
+        // 使用Bootstrap的card组件显示GitHub动态
+        $('#github-activity').append(`
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">${event.type}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">${moment(event.created_at).format('YYYY-MM-DD HH:mm')}</h6>
+              <p class="card-text">${event.repo.name}</p>
+              <a href="https://github.com/${event.repo.name}" class="card-link">View on GitHub</a>
+            </div>
+          </div>
+        `);
+      });
+    });
+  </script>
+    </div>
+            
+                
+    
+                
+                
+    
+                
+                
+    
+                
+                
+    
+                
+    
+                
+    
+                
+    
+                
+            </div>
+        </div>
+        
+    </div>
+
+    
+    
+     
+     <!-- grids block 5 -->
+     <section class="w3l-footer-29-main" id="footer">
+      <div class="footer-29 text-center">
+          <div class="container">
+            
+            <div class="main-social-footer-29">
+                        
+              <a target="_blank" href="https://www.douyin.com/user/MS4wLjABAAAARnJVW-bm2xnzaRrabGV9UETauYCL0ObC_z27aVvNvpo" class="tiktok"><span class="fa-brands fa-tiktok"></span></a>
+              <a target="_blank" href="https://space.bilibili.com/44374960?spm_id_from=333.1007.0.0" class="bilibili"><span class="fa-brands fa-bilibili"></span></a>
+              <a target="_blank" href="https://tool.gljlw.com/qq/?qq=1367072295" class="qq"><span class="fa-brands fa-qq"></span></a>
+              <a target="_blank" href="https://github.com/mmdexb" class="github"><span class="fa-brands fa-github"></span></a>
+              <a target="_blank" href="https://blog.linuschen.ink" class="blog"><span class="fa-solid fa-blog"></span></a>
+          </div>
+              <div class="bottom-copies text-center">
+                  <p class="copy-footer-29">Made By Linus Chen with love ❤</p>
+    <p class="copy-footer-29"><a href="https://beian.miit.gov.cn/#/Integrated/index">沪ICP备19007420号-8</a></p>
+                   
+              </div>
+          </div>
+      </div>
+       <!-- move top -->
+      <button onclick="topFunction()" id="movetop" title="Go to top" style="display: block;">
+                  <span class="fa fa-angle-up"></span>
+                     </button>
+                     <script>
+                         // When the user scrolls down 20px from the top of the document, show the button
+                         window.onscroll = function () {
+                             scrollFunction()
+                         };
+                  
+                         function scrollFunction() {
+                             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                                 document.getElementById("movetop").style.display = "block";
+                             } else {
+                                 document.getElementById("movetop").style.display = "none";
+                             }
+                         }
+                  
+                         // When the user clicks on the button, scroll to the top of the document
+                         function topFunction() {
+                             document.body.scrollTop = 0;
+                             document.documentElement.scrollTop = 0;
+                         }
+                     </script>
+                     <!-- /move top -->
+    </section>
+   
+    
+    <script>
+        $(function () {
+          $('.navbar-toggler').click(function () {
+            $('body').toggleClass('noscroll');
+          })
+        });
+      </script>
+
+    
+    
+    
+    
+    
+    
+    
+
+
+</body>
+</html>
+
