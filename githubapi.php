@@ -1,5 +1,5 @@
 <?php
-$token = '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';
+$token = '**************************';
 $url = 'https://api.github.com/users/mmdexb/events';
 
 $ch = curl_init();
